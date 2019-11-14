@@ -1,4 +1,4 @@
-package com.kongque.ws;
+package com.kongque.controller.ws;
 
 
 import com.kongque.entity.Message;
