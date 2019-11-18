@@ -10,9 +10,6 @@ import org.springframework.web.socket.server.standard.ServerEndpointExporter;
 @Configuration
 public class WebSocketConfig {
 
-   /*
-   支持websocket
-    */
     @Bean
     public ServerEndpointExporter createServerEndExporter(){
         return new ServerEndpointExporter();

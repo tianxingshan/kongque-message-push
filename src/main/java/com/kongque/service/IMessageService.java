@@ -1,5 +1,6 @@
 package com.kongque.service;
 
+import com.kongque.entity.Message;
 import com.kongque.util.Result;
 
 /**
@@ -11,5 +12,5 @@ public interface IMessageService {
      * 向全部用户推送消息
      * @return
      */
-    Result<String> messagePushToAllUser();
+    Result<String> messagePush(Message message);
 }
