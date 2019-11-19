@@ -1,12 +1,13 @@
 package com.kongque.entity;
 
 import com.alibaba.fastjson.JSONObject;
+import com.kongque.dto.WebSockDataDto;
 
 import javax.websocket.EncodeException;
 import javax.websocket.Encoder;
 import javax.websocket.EndpointConfig;
 
-public class MessageEncoder implements Encoder.Text<Message>{
+public class MessageEncoder implements Encoder.Text<WebSockDataDto>{
 
 
     @Override
@@ -20,7 +21,7 @@ public class MessageEncoder implements Encoder.Text<Message>{
     }
 
     @Override
-    public String encode(Message message) throws EncodeException {
-        return JSONObject.toJSONString(message);
+    public String encode(WebSockDataDto webSockDataDto) throws EncodeException {
+        return JSONObject.toJSONString(webSockDataDto);
     }
 }

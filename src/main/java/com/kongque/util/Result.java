@@ -7,7 +7,7 @@ public class Result<T> {
 
     private String code =  "200";
 
-    private String message = "通信成功";
+    private String message = "操作成功";
 
     private T returnData;
 

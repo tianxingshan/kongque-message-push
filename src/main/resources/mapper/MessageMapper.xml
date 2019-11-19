@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.kongque.dao.IMessageDao">
+    <resultMap id="message" type="com.kongque.entity.Message">
+        <result column="c_id" property="id" jdbcType="VARCHAR"></result>
+        <result column="c_content" property="content" jdbcType="VARCHAR"></result>
+        <result column="c_theme" property="theme" jdbcType="VARCHAR"></result>
+        <result column="c_create_time" property="createTime" jdbcType="TIMESTAMP"></result>
+    </resultMap>
+
+    <insert id="insert" parameterType="com.kongque.entity.Message" useGeneratedKeys="true">
+        <selectKey keyProperty="id" resultType="java.lang.String" order="BEFORE">
+            select REPLACE(UUID(),"-","") from dual
+        </selectKey>
+
+        INSERT INTO t_message ( c_id, c_content, c_theme, c_create_time )
+        VALUES
+        (#{id},#{content},#{theme},#{createTime})
+    </insert>
+
+    <select id="getList" resultMap="message">
+        SELECT
+	c_id,
+	c_content,
+	c_theme,
+	c_create_time
+FROM
+	t_message
+    </select>
+
+</mapper>

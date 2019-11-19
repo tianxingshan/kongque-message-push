@@ -1,17 +1,34 @@
 package com.kongque.entity;
 
+import com.kongque.dto.MessageDto;
+
+import java.util.Date;
+
 public class Message {
 
-    private Integer id;
-    private String  theme;
-    private String  content;
-    private String  accountId;
+    /**
+     * 主键
+     */
+    private String id;
 
-    public Integer getId() {
+    /**
+     * 主题
+     */
+    private String  theme;
+    /**
+     * 内容
+     */
+    private String  content;
+    /**
+     * 创建时间
+     */
+    private Date createTime;
+
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -30,10 +47,20 @@ public class Message {
     public void setContent(String content) {
         this.content = content;
     }
-    public String getAccountId() {
-        return accountId;
+
+    public Date getCreateTime() {
+        return createTime;
     }
-    public void setAccountId(String accountId) {
-        this.accountId = accountId;
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+
+    public Message() {
+    }
+
+    public Message(MessageDto dto) {
+        this.theme = dto.getTheme();
+        this.content=dto.getContent();
     }
 }

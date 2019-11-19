@@ -1,5 +1,6 @@
 package com.kongque.service;
 
+import com.kongque.dto.MessageDto;
 import com.kongque.entity.Message;
 import com.kongque.util.Result;
 
@@ -9,8 +10,8 @@ import com.kongque.util.Result;
 public interface IMessageService {
 
     /**
-     * 向全部用户推送消息
+     * 后台下发消息
      * @return
      */
-    Result<String> messagePush(Message message);
+    Result<String> messagePush(MessageDto dto);
 }
