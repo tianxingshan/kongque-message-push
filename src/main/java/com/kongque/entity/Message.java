@@ -23,6 +23,8 @@ public class Message {
      * 创建时间
      */
     private Date createTime;
+	
+	private Date createTime_2;
 
     public String getId() {
         return id;
