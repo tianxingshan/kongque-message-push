@@ -25,6 +25,10 @@ public class Message {
     private Date createTime;
 	
 	private Date createTime_2;
+	/**
+     * 创建时间阿萨德
+     */
+	private Date createTime_3;
 	
 	    public Date getCreateTime_2() {
         return createTime_2;
