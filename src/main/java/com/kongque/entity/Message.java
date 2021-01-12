@@ -23,6 +23,16 @@ public class Message {
      * 创建时间
      */
     private Date createTime;
+	
+	private Date createTime_2;
+	
+	    public Date getCreateTime_2() {
+        return createTime_2;
+    }
+
+    public void setCreateTime_2(Date createTime_2) {
+        this.createTime_2 = createTime_2;
+    }
 
     public String getId() {
         return id;
